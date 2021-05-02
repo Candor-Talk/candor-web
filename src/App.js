@@ -1,7 +1,8 @@
-import { Grid, Box, makeStyles } from '@material-ui/core';
+import { Grid, Box, Button, makeStyles } from '@material-ui/core';
 import CandorCard from './components/CandorCard';
 import './components/VideoPlayer/ResponsivePlayer.jsx'
 import ResponsivePlayer from './components/VideoPlayer/ResponsivePlayer.jsx';
+import './App.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +31,8 @@ function App() {
             <Box display="flex" alignItems="flex-end" textAlign="center" pb={5}>
               <div>
                 <h1>Join the conversation!</h1>
-                <p style={{ opacity: 0.75 }}>Download Candor to comment, like, and start your own conversations.</p>
+                <p className="light">Download Candor to comment, like, and start your own conversations.</p>
+                <Button variant="contained">Placeholder</Button>
               </div>
             </Box>
           </Grid>

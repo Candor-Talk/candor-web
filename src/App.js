@@ -1,11 +1,13 @@
-import { Grid, Box, makeStyles, Paper } from '@material-ui/core';
+import { Grid, Box, makeStyles } from '@material-ui/core';
 import CandorCard from './components/CandorCard';
+import './components/VideoPlayer/ResponsivePlayer.jsx'
+import ResponsivePlayer from './components/VideoPlayer/ResponsivePlayer.jsx';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       width: 'auto',
-      height: theme.spacing(80),
+      height: theme.spacing(50),
     }
   },
 }));
@@ -21,7 +23,7 @@ function App() {
           </Grid>
           <Grid item md={4} xs={12}>
             <div className={classes.root}>
-              <Paper />
+               <ResponsivePlayer />
             </div>
           </Grid>
           <Grid item container md={4} xs={12}>

@@ -23,9 +23,9 @@ function DialoguePage({ match }) {
     dispatch(getPosts(dialogueID));
   }
   return (
-    <div className="Dialogue">
-      <Container fluid className="candor-container">
-        <Row className="candor-row" >
+    <div className="h-100">
+      <Container fluid className="h-100">
+        <Row className="h-100" >
           <Col xs={colXs} md={colMd} className="candor-col-height">
            <DialogueInfoCard dialogueMetaData={dialogueMetaData}/>
           </Col>

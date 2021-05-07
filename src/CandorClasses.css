@@ -1,20 +1,8 @@
 .candor-bold {
     font-weight: 550;
 }
-.candor-row {
-    height: 90%;
-}
-.candor-container {
-    height: 100vh;
-}
 .candor-carousel {
     height: 100%;
-}
-.candor-android-badge {
-    width: 45%;
-}
-.candor-apple-badge {
-    width: 35%;
 }
 .candor-terms-privacy {
     opacity: 0.5;

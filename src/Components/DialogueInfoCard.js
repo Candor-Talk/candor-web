@@ -7,7 +7,7 @@ const DialogueInfoCard = () => {
               <p className="font-weight-light">7 responses</p>
             </div>
             <div className="mt-auto">
-              <img alt='Candor logo' src='./images/CandorIcon.svg'/>
+              <img width={40} alt='Candor logo' src='./images/CandorIcon.svg'/>
             </div>
         </div>
     )

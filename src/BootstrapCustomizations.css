@@ -20,3 +20,6 @@ body {
 .carousel-indicators {
     display: none
 }
+.font-weight-light {
+    opacity: 0.75;
+}

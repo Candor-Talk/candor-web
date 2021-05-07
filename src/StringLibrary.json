@@ -2,5 +2,12 @@
     "DownloadPrompt": {
         "joinConversation": "Join the conversation!",
         "downloadPrompt": "Download Candor to comment, like, and start your own conversations"
+    },
+    "Home": {
+        "header": "Welcome to Candor",
+        "text1": "Thanks for stopping by!",
+        "text2": "We currently have limited registration while we work closely with select creators to develop the platform. If you have a registration code you can download the app and enter your code to create an account and join the conversation.",
+        "termsOfService": "Terms of Service",
+        "privacyPolicy": "Privacy Policy"
     }
 }

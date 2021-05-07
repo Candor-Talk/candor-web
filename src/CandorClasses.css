@@ -16,6 +16,26 @@
 .candor-apple-badge {
     width: 35%;
 }
+.candor-terms-privacy {
+    opacity: 0.5;
+    font-size: 0.90rem;
+    margin-right: 1.5rem;
+}
+@media (max-width: 400px) {
+     .candor-terms-privacy {
+        margin-right: 0rem;
+    }
+}
+@media (min-width: 400px) {
+    .candor-badge-margins {
+        margin-left: 1.5rem;
+    }
+}
+@media (min-width: 450px) and (min-height: 1024px) {
+    .candor-badge-margins {
+        margin-left: 0rem;
+    }
+}
 @media (min-width: 768px) {
     .candor-col-height {
         height: 100%;

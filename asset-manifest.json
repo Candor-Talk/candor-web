@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/candor-web/static/css/main.e1c32b09.chunk.css",
-    "main.js": "/candor-web/static/js/main.ebaf8d82.chunk.js",
-    "main.js.map": "/candor-web/static/js/main.ebaf8d82.chunk.js.map",
+    "main.js": "/candor-web/static/js/main.f6b4ade1.chunk.js",
+    "main.js.map": "/candor-web/static/js/main.f6b4ade1.chunk.js.map",
     "runtime-main.js": "/candor-web/static/js/runtime-main.9ee46a21.js",
     "runtime-main.js.map": "/candor-web/static/js/runtime-main.9ee46a21.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/candor-web/static/css/2.4c97ca4f.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.26dbbe3d.chunk.js",
     "static/css/main.e1c32b09.chunk.css",
-    "static/js/main.ebaf8d82.chunk.js"
+    "static/js/main.f6b4ade1.chunk.js"
   ]
 }

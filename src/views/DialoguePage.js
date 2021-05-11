@@ -2,11 +2,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './../CandorClasses.css';
 import './../BootstrapCustomizations.css';
 import { Container, Col, Row } from 'react-bootstrap';
-import DialogueCarousel from './../components/PostCarousel';
-import DialogueInfoCard from './../components/DialogueInfoCard';
-import DownloadPrompt from './../components/DownloadPrompt';
+import DialogueCarousel from '../components/PostCarousel';
+import DialogueInfoCard from '../components/DialogueInfoCard';
+import DownloadPrompt from '../components/DownloadPrompt';
 import { useSelector, useDispatch } from 'react-redux';
-import { getDialogue, getPosts } from './../actions';
+import { getDialogue, getPosts } from '../actions';
 
 // Column layout constants
 const colXs = 12;

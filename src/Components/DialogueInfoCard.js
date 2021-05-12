@@ -8,7 +8,7 @@ const DialogueInfoCard = (props) => {
             <p className="font-weight-light">{props.dialogueMetaData.numberOfPosts} responses</p>
           </div>
           <div className="mt-auto">
-            <img width={40} alt='Candor logo' src='./images/CandorIcon.svg'/>
+            <img width={40} alt='Candor logo' src='../../images/CandorIcon.svg'/>
           </div>
       </div>
   )

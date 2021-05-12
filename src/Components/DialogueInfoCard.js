@@ -13,7 +13,6 @@ const DialogueInfoCard = (props) => {
       </div>
   )
   } else {
-    // TODO: find a better way for undefined response
     return (
       <div></div>
     )

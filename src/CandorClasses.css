@@ -1,3 +1,9 @@
+.candor-row {
+    height: 100%;
+}
+.candor-container {
+    height: 100vh;
+}
 .candor-bold {
     font-weight: 550;
 }

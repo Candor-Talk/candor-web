@@ -15,7 +15,6 @@ function GetPosts(dialogueID) {
         .then(querySnapshot => {
             const dataList = querySnapshot.docs.map(doc => doc.data());
             const sortedList = dataList.sort((l, r) => {
-
                 return l.createdAt.toDate() - r.createdAt.toDate();
             })
             setPosts(sortedList);

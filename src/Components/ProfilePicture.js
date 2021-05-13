@@ -1,7 +1,7 @@
-const ProfilePicture = (props) => {
-    if (props.photoUrl) {
+const ProfilePicture = ({photoUrl}) => {
+    if (photoUrl) {
         return (
-            <img className="user-profile-image" src={props.photoUrl} />
+            <img className="user-profile-image" src={photoUrl} />
         )
     } else {
         return (

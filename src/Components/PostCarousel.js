@@ -1,17 +1,29 @@
 import { Carousel } from 'react-bootstrap';
 import PostPlayer from './VideoPlayer/PostPlayer.jsx';
 import './VideoPlayer/PostPlayer.jsx';
+import StringLibrary from '../Libraries/StringLibrary.json';
 
-const PostCarousel = (props) => {
-  if (props.postsList) {
+const library = StringLibrary.Dialogues;
+
+const PostCarousel = ({postsList}) => {
+  if (postsList) {
     return (
       <div style={{height: '100%'}}>
           <Carousel interval={null} className="candor-carousel">
             {
-              props.postsList.map( post => {
+              postsList.filter( post => post.asset.status!=="").map( (post, index) => {
                 return (
-                  <Carousel.Item className="candor-carousel">
-                    <PostPlayer post={post} />
+                  <Carousel.Item key={index} className="candor-carousel">
+                    {
+                      post.asset.status=="deleted" ?
+                        <div >
+                          <div className="deleted-post">
+                            <h>{library.deletedPost}</h>
+                          </div>
+                        </div>
+                        :
+                        <PostPlayer post={post} />
+                    }
                   </Carousel.Item>
                 )
               })

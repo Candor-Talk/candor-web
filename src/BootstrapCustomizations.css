@@ -1,3 +1,6 @@
+body > #root {
+  height: 100%;
+}
 body {
     color: white;
     background-color: black;
@@ -16,4 +19,7 @@ body {
 }
 .carousel-indicators {
     display: none
+}
+.font-weight-light {
+    opacity: 0.75;
 }

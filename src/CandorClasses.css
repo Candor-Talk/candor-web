@@ -1,20 +1,53 @@
-.candor-bold {
-    font-weight: 550;
-}
 .candor-row {
-    height: 90%;
+    height: 100%;
 }
 .candor-container {
     height: 100vh;
 }
+.candor-bold {
+    font-weight: 550;
+}
 .candor-carousel {
     height: 100%;
 }
-.candor-android-badge {
-    width: 45%;
+.candor-terms-privacy {
+    opacity: 0.5;
+    font-size: 0.90rem;
+    margin-right: 1.5rem;
+    color: white;
 }
-.candor-apple-badge {
-    width: 35%;
+
+.user-profile-image {
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.deleted-post {
+    width: 50px;
+    height: 50px;
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin: -25px 0 0 -25px; /* apply negative top and left margins to truly center the element */
+  }
+
+@media (max-width: 400px) {
+     .candor-terms-privacy {
+        margin-right: 0rem;
+    }
+}
+@media (min-width: 400px) {
+    .candor-badge-margins {
+        margin-left: 1.5rem;
+    }
+}
+@media (min-width: 450px) and (min-height: 1024px) {
+    .candor-badge-margins {
+        margin-left: 0rem;
+    }
 }
 @media (min-width: 768px) {
     .candor-col-height {

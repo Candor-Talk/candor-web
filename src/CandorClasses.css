@@ -8,6 +8,7 @@
     opacity: 0.5;
     font-size: 0.90rem;
     margin-right: 1.5rem;
+    color: white;
 }
 @media (max-width: 400px) {
      .candor-terms-privacy {

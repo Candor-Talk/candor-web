@@ -1,33 +1,23 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './CandorClasses.css';
-import './BootstrapCustomizations.css';
-import { Container, Col, Row } from 'react-bootstrap';
-import DialogueCarousel from './components/DialogueCarousel';
-import DialogueInfoCard from './components/DialogueInfoCard';
-import DownloadPrompt from './components/DownloadPrompt';
-
-// Column layout constants
-const colXs = 12;
-const colMd = 4;
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import DialoguePage from './views/DialoguePage.js';
+import HomePage from './views/Home.js';
+import TermsOfServicePage from './views/TermsOfService.js';
+import PrivacyPolicyPage from './views/PrivacyPolicy.js';
 
 function App() {
   return (
-    <div className="h-100">
-      <Container fluid className="h-100">
-        <Row className="h-100" >
-          <Col xs={colXs} md={colMd} className="candor-col-height">
-           <DialogueInfoCard />
-          </Col>
-          <Col xs={colXs} md={colMd} className="candor-col-height">
-            <DialogueCarousel />
-          </Col>
-          <Col xs={colXs} md={colMd} className="text-center d-flex align-items-end candor-col-height pb-5">
-            <DownloadPrompt />
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Router>
+      <div className="h-100">
+        <Switch>
+          <Route path="/" exact component={HomePage}></Route>
+          <Route path="/terms-of-service" exact component={TermsOfServicePage}></Route>
+          <Route path="/privacy-policy" exact component={PrivacyPolicyPage}></Route>
+          <Route path="/dialogue/:id" component={DialoguePage}></Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
+
 
 export default App;

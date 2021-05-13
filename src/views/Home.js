@@ -1,14 +1,31 @@
+
 import { Container, Col, Row } from 'react-bootstrap';
 import StringLibrary from '../StringLibrary.json';
+
+// import { Col } from 'react-bootstrap';
+// import StringLibrary from '../Libraries/StringLibrary.json';
+import { Link } from 'react-router-dom';
+
 
 const library = StringLibrary.Home;
 
 const Home = () => {
     return (
+
         <div className="h-100">
             <Container className="h-100">
                <Row className="h-100">
                     <Col className="col-md-6 offset-md-3 align-self-center text-center">
+{/* =======
+        <div
+            style={{
+                position: 'absolute', left: '50%', top: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '500px',
+            }}
+        >
+                    <Col className="align-self-center text-center">
+>>>>>>> main */}
                         <img className="mb-3"  width={60}  alt='Candor logo' src='./images/CandorIcon.svg' />
                         <h1 className="my-2">{library.header}</h1>
                         <p>
@@ -25,14 +42,27 @@ const Home = () => {
                         </a>
                         </div>
                         <div className="candor-terms-privacy d-flex justify-content-center mt-3">
-                            <p>{library.termsOfService}</p>
+{/* <<<<<<< HEAD */}
+                            {/* <p>{library.termsOfService}</p>
                             <span className="ml-3 mr-3">&#x2022;</span>
                             <p>{library.privacyPolicy}</p>
+                             */}
+                            <Link to="/terms-of-service" style={{color:'white'}}>{library.termsOfService}</Link>
+                            <span className="ml-3 mr-3">&#x2022;</span>
+                            <Link to="/privacy-policy" style={{color:'white'}}>{library.privacyPolicy}</Link>
                         </div>
           
                     </Col>
                </Row>
              </Container>
+{/* ======= */}
+                            {/* <Link to="/terms-of-service" style={{color:'white'}}>{library.termsOfService}</Link>
+                            <span className="ml-3 mr-3">&#x2022;</span>
+                            <Link to="/privacy-policy" style={{color:'white'}}>{library.privacyPolicy}</Link>
+                        </div>
+          
+                    </Col>
+>>>>>>> main */}
         </div>
     )
 }

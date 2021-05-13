@@ -1,0 +1,8 @@
+{
+    "dialogueActions": {
+        "get": "GET_DIALOGUE"
+    },
+    "postActions": {
+        "getAll": "GET_POSTS"
+    }
+}

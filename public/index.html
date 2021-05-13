@@ -2,9 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!-- 
+    Gets replaced by URL specific meta tags via Firebase Functions
+    -->
+    <meta property="fb:app_id" content="APP_ID" />
+    <meta property="og:title" content="CANDOR TITLE" />
+    <meta property="og:description" content="OG_DESCRIPTION" />
+    <meta property="og:video" content="OG_VIDEO" />
+    <meta property="og:video:secure_url" content="OG_VIDEO_SECURE_URL" />
+    <meta property="og:video:width" content="200" />
+    <meta property="og:video:height" content="200" />
+    <meta property="og:url" content="OG_URL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="OG_IMAGE" />
+
+    <meta property="twitter:card" content="player" />
+    <meta property="twitter:site" content="@talkcandor" />
+    <meta property="twitter:title" content="CANDOR TITLE" />
+    <meta property="twitter:player" content="TWITTER_VIDEO" />
+    <meta property="twitter:player:width" content="480" />
+    <meta property="twitter:player:height" content="480" />
+    <meta property="twitter:image" content="TWITTER_IMAGE" />
+
+    <meta name="functions-insert-dynamic-meta" />
+    <meta name="functions-insert-dynamic-og" />
+
     <link rel="icon" href="./images/CandorIcon.svg" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta

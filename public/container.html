@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    // script
+    <script src="https://unpkg.com/@mux/videojs-kit@0.1/dist/index.js"></script>
+    // css
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@mux/videojs-kit@0.1/dist/index.css"
+    />
+
+    <style type="text/css">
+      video {
+        width: 100%;
+        max-width: auto;
+        height: auto;
+      }
+    </style>
+
+    <video
+      id="my-player"
+      class="video-js vjs-16-9"
+      controls
+      preload="auto"
+      data-setup="{}"
+    >
+      <source src="PLAYBACK_ID" type="video/mux" />
+    </video>
+  </body>
+</html>

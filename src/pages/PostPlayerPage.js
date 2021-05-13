@@ -1,12 +1,13 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./../CandorClasses.css";
+import "./../BootstrapCustomizations.css";
 import ReactPlayer from "react-player";
-import "./post-player.css";
 
 const muxURLPrefix = "https://stream.mux.com/";
 const videoFileType = ".m3u8";
 
-const PostPlayer = props => {
-  const url =
-    muxURLPrefix + props.post.asset.playback_ids[0].id + videoFileType;
+function PostPlayerPage({ match }) {
+  const url = muxURLPrefix + match.params.id + videoFileType;
   return (
     <div className="player-wrapper">
       <ReactPlayer
@@ -18,6 +19,6 @@ const PostPlayer = props => {
       />
     </div>
   );
-};
+}
 
-export default PostPlayer;
+export default PostPlayerPage;

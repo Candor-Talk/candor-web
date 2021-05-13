@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import DialoguePage from './pages/DialoguePage.js';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import DialoguePage from "./pages/DialoguePage.js";
 
 function App() {
   return (
@@ -10,9 +10,7 @@ function App() {
         </Switch>
       </div>
     </Router>
-  
   );
 }
-
 
 export default App;

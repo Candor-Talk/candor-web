@@ -1,12 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './../CandorClasses.css';
-import './../BootstrapCustomizations.css';
-import { Container, Col, Row } from 'react-bootstrap';
-import DialogueCarousel from './../components/PostCarousel';
-import DialogueInfoCard from './../components/DialogueInfoCard';
-import DownloadPrompt from './../components/DownloadPrompt';
-import { useSelector, useDispatch } from 'react-redux';
-import { getDialogue, getPosts } from './../actions';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./../CandorClasses.css";
+import "./../BootstrapCustomizations.css";
+import { Container, Col, Row } from "react-bootstrap";
+import DialogueCarousel from "./../components/PostCarousel";
+import DialogueInfoCard from "./../components/DialogueInfoCard";
+import DownloadPrompt from "./../components/DownloadPrompt";
+import { useSelector, useDispatch } from "react-redux";
+import { getDialogue, getPosts } from "./../actions";
 
 // Column layout constants
 const colXs = 12;
@@ -25,14 +25,18 @@ function DialoguePage({ match }) {
   return (
     <div className="Dialogue">
       <Container fluid className="candor-container">
-        <Row className="candor-row" >
+        <Row className="candor-row">
           <Col xs={colXs} md={colMd} className="candor-col-height">
-           <DialogueInfoCard dialogueMetaData={dialogueMetaData}/>
+            <DialogueInfoCard dialogueMetaData={dialogueMetaData} />
           </Col>
           <Col xs={colXs} md={colMd} className="candor-col-height">
             <DialogueCarousel postsList={postsList} />
           </Col>
-          <Col xs={colXs} md={colMd} className="text-center d-flex align-items-end candor-col-height pb-5">
+          <Col
+            xs={colXs}
+            md={colMd}
+            className="text-center d-flex align-items-end candor-col-height pb-5"
+          >
             <DownloadPrompt />
           </Col>
         </Row>

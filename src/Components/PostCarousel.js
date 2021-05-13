@@ -8,10 +8,25 @@ const PostCarousel = (props) => {
       <div style={{height: '100%'}}>
           <Carousel interval={null} className="candor-carousel">
             {
-              props.postsList.map( post => {
+              props.postsList.filter( post => {
+                if (post.asset.status=="") {
+                  return false
+                } else {
+                  return true
+                }
+              }).map( (post, index) => {
                 return (
-                  <Carousel.Item className="candor-carousel">
-                    <PostPlayer post={post} />
+                  <Carousel.Item key={index} className="candor-carousel">
+                    {
+                      post.asset.status=="deleted" ?
+                        <div >
+                          <div className="deleted-post">
+                            <h>Deleted post</h>
+                          </div>
+                        </div>
+                        :
+                        <PostPlayer post={post} />
+                    }
                   </Carousel.Item>
                 )
               })

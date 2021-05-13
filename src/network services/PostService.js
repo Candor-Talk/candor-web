@@ -14,7 +14,11 @@ function GetPosts(dialogueID) {
         .get()
         .then(querySnapshot => {
             const dataList = querySnapshot.docs.map(doc => doc.data());
-            setPosts(dataList);
+            const sortedList = dataList.sort((l, r) => {
+
+                return l.createdAt.toDate() - r.createdAt.toDate();
+            })
+            setPosts(sortedList);
         })
         .catch(function(error) {
             console.error(errorStrings.documentFetchError, error);

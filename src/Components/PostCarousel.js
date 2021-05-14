@@ -15,7 +15,7 @@ const PostCarousel = ({postsList}) => {
                 return (
                   <Carousel.Item key={index} className="candor-carousel">
                     {
-                      post.asset.status=="deleted" ?
+                      post.asset.status==="deleted" ?
                         <div >
                           <div className="deleted-post">
                             <h>{library.deletedPost}</h>

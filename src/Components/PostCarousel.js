@@ -5,11 +5,11 @@ import StringLibrary from '../Libraries/StringLibrary.json';
 
 const library = StringLibrary.Dialogues;
 
-const PostCarousel = ({postsList}) => {
+const PostCarousel = ({postsList, postIndex}) => {
   if (postsList) {
     return (
       <div style={{height: '100%'}}>
-          <Carousel interval={null} className="candor-carousel">
+          <Carousel wrap={false} defaultActiveIndex={postIndex} interval={null} className="candor-carousel">
             {
               postsList.filter( post => post.asset.status!=="").map( (post, index) => {
                 return (

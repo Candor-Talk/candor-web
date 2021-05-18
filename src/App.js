@@ -12,7 +12,7 @@ function App() {
           <Route path="/" exact component={HomePage}></Route>
           <Route path="/terms-of-service" exact component={TermsOfServicePage}></Route>
           <Route path="/privacy-policy" exact component={PrivacyPolicyPage}></Route>
-          <Route path="/dialogue/:id" component={DialoguePage}></Route>
+          <Route path="/dialogue/:id/:index" component={DialoguePage}></Route>
         </Switch>
       </div>
     </Router>

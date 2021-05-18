@@ -18,6 +18,8 @@ function DialoguePage({ match }) {
   const dispatch = useDispatch();
 
   const dialogueID = match.params.id;
+  const postIndex = parseInt(match.params.index);
+
   if (dialogueID) {
     dispatch(getDialogue(dialogueID));
     dispatch(getPosts(dialogueID));
@@ -30,7 +32,7 @@ function DialoguePage({ match }) {
            <DialogueInfoCard dialogueMetaData={dialogueMetaData}/>
           </Col>
           <Col xs={colXs} md={colMd}>
-            <DialogueCarousel postsList={postsList} />
+            <DialogueCarousel postsList={postsList} postIndex={postIndex} />
           </Col>
           <Col xs={colXs} md={colMd} className="text-center d-flex align-items-end pb-5">
             <DownloadPrompt />

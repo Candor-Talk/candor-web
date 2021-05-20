@@ -2,16 +2,31 @@ import { Carousel } from 'react-bootstrap';
 import PostPlayer from './VideoPlayer/PostPlayer.jsx';
 import './VideoPlayer/PostPlayer.jsx';
 import StringLibrary from '../Libraries/StringLibrary.json';
+import { useState } from 'react';
 
 const library = StringLibrary.Dialogues;
 
 const PostCarousel = ({postsList, postIndex}) => {
-  if (postsList) {
+
+  const [currentIndex, setCurrentIndex] = useState(postIndex);
+
+  const handleSelect = (selectedIndex, e) => {
+    setCurrentIndex(selectedIndex);
+  };
+
+  const cleanDataPosts = postsList.filter( post => post.asset.status!=="");
+  const postDidCompletePlaying = (endedPostIndex) => {
+    const newPostIndex = endedPostIndex + 1;
+    const postsMaxIndex = cleanDataPosts.length - 1;
+    setCurrentIndex(newPostIndex>postsMaxIndex ? postsMaxIndex : newPostIndex);
+  }
+
+  if (cleanDataPosts) {
     return (
       <div style={{height: '100%'}}>
-          <Carousel wrap={false} defaultActiveIndex={postIndex} interval={null} className="candor-carousel">
+          <Carousel wrap={false} onSelect={handleSelect} activeIndex={currentIndex} interval={null} className="candor-carousel">
             {
-              postsList.filter( post => post.asset.status!=="").map( (post, index) => {
+              cleanDataPosts.map( (post, index) => {
                 return (
                   <Carousel.Item key={index} className="candor-carousel">
                     {
@@ -22,7 +37,7 @@ const PostCarousel = ({postsList, postIndex}) => {
                           </div>
                         </div>
                         :
-                        <PostPlayer post={post} />
+                        <PostPlayer post={post} index={index} currentCarouselIndex={currentIndex} postDidCompletePlaying={postDidCompletePlaying} />
                     }
                   </Carousel.Item>
                 )

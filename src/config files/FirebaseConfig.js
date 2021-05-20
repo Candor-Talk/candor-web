@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 
 const firebaseConfigStaging = {
   databaseURL: "https://candor-stage.firebaseio.com",
@@ -7,10 +7,10 @@ const firebaseConfigStaging = {
 
 const firebaseConfigProduction = {
   databaseURL: "https://candor-a5a63.firebaseio.com",
-    projectId: "candor-a5a63"
-}
+  projectId: "candor-a5a63"
+};
 // Initialize Firebase
-const firebaseApp = firebase.initializeApp(firebaseConfigProduction);
+const firebaseApp = firebase.initializeApp(firebaseConfigStaging);
 const db = firebaseApp.firestore();
 
 export default db;

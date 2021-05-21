@@ -23,7 +23,7 @@ const PostCarousel = ({postsList, postIndex}) => {
 
   if (cleanDataPosts) {
     return (
-      <div style={{height: '100%'}}>
+      <div className="h-100">
           <Carousel wrap={false} onSelect={handleSelect} activeIndex={currentIndex} interval={null} className="candor-carousel">
             {
               cleanDataPosts.map( (post, index) => {
@@ -39,6 +39,10 @@ const PostCarousel = ({postsList, postIndex}) => {
                         :
                         <PostPlayer post={post} index={index} currentCarouselIndex={currentIndex} postDidCompletePlaying={postDidCompletePlaying} />
                     }
+                    <Carousel.Caption className="d-block d-sm-none">
+                      <h3>First slide label</h3>
+                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
                   </Carousel.Item>
                 )
               })

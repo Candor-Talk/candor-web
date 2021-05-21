@@ -1,4 +1,4 @@
-import { Col } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 import StringLibrary from '../Libraries/StringLibrary.json';
 import { Link } from 'react-router-dom';
 import GooglePlayStoreButton from '../components/GooglePlayStoreButton.js';
@@ -8,14 +8,10 @@ const library = StringLibrary.Home;
 
 const Home = () => {
     return (
-        <div
-            style={{
-                position: 'absolute', left: '50%', top: '50%',
-                transform: 'translate(-50%, -50%)',
-                width: '500px',
-            }}
-        >
-                    <Col className="align-self-center text-center">
+        <div className="h-100">
+            <Container className="h-100">
+                <Row className="h-100">
+                    <Col className="col-md-6 offset-md-3 align-self-center text-center">
                         <img className="mb-3"  width={60}  alt='Candor logo' src='./images/CandorIcon.svg' />
                         <h1 className="my-2">{library.header}</h1>
                         <p>
@@ -33,6 +29,8 @@ const Home = () => {
                             <Link to="/privacy-policy" style={{color:'white'}}>{library.privacyPolicy}</Link>
                         </div>
                     </Col>
+                </Row>
+            </Container>
         </div>
     )
 }

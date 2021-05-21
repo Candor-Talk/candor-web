@@ -9,7 +9,6 @@ body {
 }
 .carousel-caption {
     position: absolute;
-    top: 70px;
     left: 0%;
     z-index: 10;
     width: 100%;
@@ -43,5 +42,15 @@ body {
 @media (min-width: 430px) {
     body {
         padding: 40px;
+    }
+}
+@media (max-width: 400px) {
+    .carousel-caption {
+        top: 70px;
+    }
+}
+@media (min-width: 400px) {
+    .carousel-caption {
+        top: 0px;
     }
 }

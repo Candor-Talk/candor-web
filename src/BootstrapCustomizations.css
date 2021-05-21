@@ -4,7 +4,6 @@ body > #root {
 body {
     color: white;
     background-color: black;
-    padding: 40px;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
 }
@@ -22,4 +21,16 @@ body {
 }
 .font-weight-light {
     opacity: 0.75;
+}
+
+@media (max-width: 430px) {
+    body {
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 430px) {
+    body {
+        padding: 40px;
+    }
 }

@@ -7,14 +7,12 @@ import PrivacyPolicyPage from './views/PrivacyPolicy.js';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/" exact component={HomePage}></Route>
-          <Route path="/terms-of-service" exact component={TermsOfServicePage}></Route>
-          <Route path="/privacy-policy" exact component={PrivacyPolicyPage}></Route>
-          <Route path="/dialogue/:id/:index" component={DialoguePage}></Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/" exact component={HomePage}></Route>
+        <Route path="/terms-of-service" exact component={TermsOfServicePage}></Route>
+        <Route path="/privacy-policy" exact component={PrivacyPolicyPage}></Route>
+        <Route path="/dialogue/:id/:index" component={DialoguePage}></Route>
+      </Switch>
     </Router>
   );
 }

@@ -25,16 +25,16 @@ function DialoguePage({ match }) {
     dispatch(getPosts(dialogueID));
   }
   return (
-    <div className="Dialogue">
-      <Container fluid className="candor-container">
-        <Row className="candor-row" style={{height:'90%'}}>
-          <Col xs={colXs} md={colMd}>
+    <div className="h-100">
+      <Container fluid className="h-100">
+        <Row className="h-100">
+          <Col xs={colXs} md={colMd} className="d-none d-sm-block">
            <DialogueInfoCard dialogueMetaData={dialogueMetaData}/>
           </Col>
-          <Col xs={colXs} md={colMd}>
-            <DialogueCarousel postsList={postsList} postIndex={postIndex} />
+          <Col xs={colXs} md={colMd} className="h-100 pb-3">
+            <DialogueCarousel postsList={postsList} postIndex={postIndex} dialogueMetaData={dialogueMetaData}/>
           </Col>
-          <Col xs={colXs} md={colMd} className="text-center d-flex align-items-end pb-5">
+          <Col xs={colXs} md={colMd} className="text-center d-flex align-items-end candor-col-height pb-5">
             <DownloadPrompt />
           </Col>
         </Row>

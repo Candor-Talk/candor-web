@@ -32,7 +32,7 @@ function DialoguePage({ match }) {
            <DialogueInfoCard dialogueMetaData={dialogueMetaData}/>
           </Col>
           <Col xs={colXs} md={colMd} className="h-100 pb-3">
-            <DialogueCarousel postsList={postsList} postIndex={postIndex} />
+            <DialogueCarousel postsList={postsList} postIndex={postIndex} dialogueMetaData={dialogueMetaData}/>
           </Col>
           <Col xs={colXs} md={colMd} className="text-center d-flex align-items-end candor-col-height pb-5">
             <DownloadPrompt />

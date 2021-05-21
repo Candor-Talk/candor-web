@@ -16,7 +16,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
-    text-align: center;
+    text-align: left;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
 }
 .carousel-inner { 

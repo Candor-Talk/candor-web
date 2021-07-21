@@ -13,8 +13,6 @@ const colXs = 12;
 const colMd = 4;
 
 function DialoguePage({ match }) {
-  const dialogueMetaData = useSelector(state => state.dialogueMetaData);
-  const postsList = useSelector(state => state.posts);
   const dispatch = useDispatch();
 
   const dialogueID = match.params.id;
@@ -24,6 +22,9 @@ function DialoguePage({ match }) {
     dispatch(getDialogue(dialogueID));
     dispatch(getPosts(dialogueID));
   }
+
+  const dialogueMetaData = useSelector(state => state.dialogueMetaData);
+  const postsList = useSelector(state => state.posts);
   return (
     <div className="h-100">
       <Container fluid className="h-100">
